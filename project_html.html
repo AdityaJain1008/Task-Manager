@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="project_css.css">
+</head>
+
+<body>
+    <section class="taskManager">
+        <header class="card">
+            <h1>📝𝓣𝓐𝓢𝓚 𝓜𝓐𝓝𝓐𝓖𝓔𝓡📝</h1>
+            <form id="taskForm">
+                <input type="text" id="taskInput" placeholder="Add a task..." required>
+                <button type="submit">Add Task</button><br>
+            </form><br>
+            <div>
+                <label for="dueDate">𝘿𝙐𝙀 𝘿𝘼𝙏𝙀:</label>
+                <input type="date" id="dueDate" name="dueDate" required>
+                <label for="category">𝘾𝘼𝙏𝙀𝙂𝙊𝙍𝙔:</label>
+                <select id="category" name="category" required>
+                    <option value="Select">Select</option>
+                    <option value="WORKPLACE">WORKPLACE</option>
+                    <option value="OCCASIONAL">OCCASIONAL</option>
+                    <option value="PERSONAL">PERSONAL</option>
+                    <option value="SHOPPING">SHOPPING</option>
+                </select>
+            </div><br>
+            <input type="text" id="searchInput" placeholder="Search tasks...">
+            <br><br>
+            <label for="categorySearch">𝙎𝙀𝘼𝙍𝘾𝙃 𝘽𝙔 𝘾𝘼𝙏𝙀𝙂𝙊𝙍𝙔:</label>
+            <input type="text" id="categorySearch" placeholder="Enter category name...">
+            <br><br>
+            <div class="sort-buttons">
+                <button id="sortByDate">ꜱᴏʀᴛ ʙʏ ᴅᴜᴇ ᴅᴀᴛᴇ</button>
+                <button id="sortByStatus">ꜱᴏʀᴛ ʙʏ ꜱᴛᴀᴛᴜꜱ</button>
+                <button id="sortByCategory" class="sort-button">ꜱᴏʀᴛ ʙʏ ᴄᴀᴛᴇɢᴏʀʏ</button>
+            </div>
+        </header>
+        <section id="taskContainer"></section>
+    </section>
+    <div class="confirm">
+        <h1>Confirm your action</h1>
+        <p>Are you <strong>really</strong> sure that you want to delete this task?</p>
+        <button class="cancel">Cancel</button>
+        <button autofocus class="confirmed">Confirm</button>
+    </div>
+    <script src="project_js.js"></script>
+</body>
+
+</html>
